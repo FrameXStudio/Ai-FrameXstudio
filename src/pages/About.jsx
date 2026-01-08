@@ -6,6 +6,9 @@ import storyImg from "../assets/about-story.png";
 import workflowImg from "../assets/about-workflow.png";
 import indiaImg from "../assets/about-india.png";
 import founderImg from "../assets/director.jpeg";
+import coFounderImg from "../assets/coFounder.jpeg";
+
+
 
 /* ================= MOTION VARIANTS ================= */
 const fadeUp = {
@@ -179,6 +182,56 @@ export default function About() {
         </p>
       </section>
 
+{/* ================= CO-FOUNDER ================= */}
+<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
+
+  {/* TEXT LEFT */}
+  <motion.div
+    className="space-y-6"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUp}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold">
+      Driven by{" "}
+      <span className="text-blue-400">Engineering Excellence</span>
+    </h2>
+
+    <p className="text-slate-300 text-lg leading-relaxed">
+      Framex was founded by someone who has lived inside the realities of storytelling — tight deadlines, creative pressure, and compromise.
+    </p>
+
+    <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
+     “Technology should disappear into the background — so creators can stay focused on emotion, performance, and story.”
+    </blockquote>
+
+    <div className="pt-4">
+      <p className="text-white font-semibold text-lg">Founder</p>
+      <p className="text-slate-400">
+        Sridhar Enugula, Framex Digital Studio
+      </p>
+    </div>
+  </motion.div>
+
+  {/* IMAGE RIGHT */}
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUp}
+  >
+    <img
+      src={coFounderImg}
+      alt="Co-Founder of Framex Digital Studio"
+      className="rounded-2xl shadow-xl object-cover w-full h-[420px] object-center"
+    />
+  </motion.div>
+
+</section>
+
+
+
       {/* ================= FOUNDER ================= */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
 
@@ -224,6 +277,7 @@ export default function About() {
           </div>
         </motion.div>
       </section>
+
 
       {/* ================= INDIA ================= */}
       <motion.section
