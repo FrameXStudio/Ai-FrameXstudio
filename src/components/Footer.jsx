@@ -70,7 +70,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/company/framexstudio/"
                 aria-label="LinkedIn"
                 className="p-3 rounded-full bg-[#0D1525] border border-slate-700
                            hover:border-blue-400 hover:text-blue-400

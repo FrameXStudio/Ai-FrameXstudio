@@ -218,9 +218,9 @@ export default function About() {
           </blockquote>
 
           <div className="pt-4">
-            <p className="text-white font-semibold text-lg">Founder Name</p>
+            <p className="text-white font-semibold text-lg">Director Of Engineering</p>
             <p className="text-slate-400">
-              Founder & CEO, Framex Digital Studio
+              Srikanth Enugula, Framex Digital Studio
             </p>
           </div>
         </motion.div>
