@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Contactimage from '../assets/contact-image.jpg'
 
 /* ================= MOTION VARIANTS ================= */
 const fadeUp = {
@@ -83,7 +84,7 @@ export default function Contact() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <img
-              src="/src/assets/contact-image.jpg"
+              src={Contactimage}
               alt="Contact Framex"
               className="rounded-xl shadow-lg object-cover w-full h-[360px]"
             />
