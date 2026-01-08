@@ -208,14 +208,13 @@ export default function About() {
           </h2>
 
           <p className="text-slate-300 text-lg leading-relaxed">
-            Framex was founded by someone who has lived inside the realities of
-            storytelling — tight deadlines, creative pressure, and compromise.
+            He is a Director of Engineering with 15+ years of experience leading AI-driven platforms and cloud-native architectures. He specializes in scaling AI SaaS systems, optimizing ML-ready infrastructure, and embedding secure, compliant DevSecOps practices—reducing cloud costs by 50%+ while accelerating delivery. He has mentored 80+ engineers globally, building high-performing teams that consistently deliver AI solutions at scale.
           </p>
 
-          <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
+          {/* <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
             “Technology should disappear into the background —
             so creators can stay focused on emotion, performance, and story.”
-          </blockquote>
+          </blockquote> */}
 
           <div className="pt-4">
             <p className="text-white font-semibold text-lg">Director Of Engineering</p>
