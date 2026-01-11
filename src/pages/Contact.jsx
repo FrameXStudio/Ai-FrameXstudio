@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Contactimage from '../assets/contact-image.jpg'
+import Contactimage from '../assets/contact-image.webp'
 
 /* ================= MOTION VARIANTS ================= */
 const fadeUp = {

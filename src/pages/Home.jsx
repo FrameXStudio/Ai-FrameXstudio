@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImg from "../assets/hero-ai.png";
+import heroImg from "../assets/hero-ai.jpg";
 
 /* ================= SERVICES DATA ================= */
 const services = [

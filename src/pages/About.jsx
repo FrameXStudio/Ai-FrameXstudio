@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // 👉 Images
-import storyImg from "../assets/about-story.png";
-import workflowImg from "../assets/about-workflow.png";
-import indiaImg from "../assets/about-india.png";
-import founderImg from "../assets/director.jpeg";
-import coFounderImg from "../assets/coFounder.jpeg";
+import storyImg from "../assets/about-story.jpg";
+// import workflowImg from "../assets/about-workflow.png";
+import indiaImg from "../assets/about-india.jpg";
+import founderImg from "../assets/director.jpg";
+import coFounderImg from "../assets/coFounder.jpg";
 
 
 
@@ -201,7 +201,7 @@ export default function About() {
       </section>
 
       {/* ================= WORKFLOW IMAGE ================= */}
-      <motion.section
+      {/* <motion.section
         className="mb-32"
         initial="hidden"
         whileInView="visible"
@@ -213,7 +213,7 @@ export default function About() {
           alt="AI post-production workflow"
           className="w-full h-[420px] object-cover rounded-2xl shadow-xl"
         />
-      </motion.section>
+      </motion.section> */}
 
       {/* ================= VISION ================= */}
       <section className="mb-32">
