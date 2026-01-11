@@ -59,6 +59,8 @@ export default function Home() {
     <div className="text-white">
 
       {/* ================= HERO ================= */}
+
+
       <section className="w-full py-24 px-6 bg-gradient-to-br from-[#0B1220] via-[#09192F] to-[#08101C] rounded-xl mt-6 shadow-lg overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
 

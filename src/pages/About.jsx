@@ -39,6 +39,102 @@ export default function About() {
   return (
     <div className="text-white px-6 py-20 max-w-7xl mx-auto">
 
+
+        {/* ================= FOUNDER ================= */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeUp}
+        >
+          <img
+            src={founderImg}
+            alt="Founder of Framex Digital Studio"
+            className="rounded-2xl shadow-xl object-cover object-top w-full h-[420px]"
+          />
+        </motion.div>
+
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeUp}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Built by a{" "}
+            <span className="text-blue-400">Storyteller</span>
+          </h2>
+
+          <p className="text-slate-300 text-lg leading-relaxed">
+            He is a Director of Engineering with 15+ years of experience leading AI-driven platforms and cloud-native architectures. He specializes in scaling AI SaaS systems, optimizing ML-ready infrastructure, and embedding secure, compliant DevSecOps practices—reducing cloud costs by 50%+ while accelerating delivery. He has mentored 80+ engineers globally, building high-performing teams that consistently deliver AI solutions at scale.
+          </p>
+
+          {/* <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
+            “Technology should disappear into the background —
+            so creators can stay focused on emotion, performance, and story.”
+          </blockquote> */}
+
+          <div className="pt-4">
+            <p className="text-white font-semibold text-lg">Director Of Engineering</p>
+            <p className="text-slate-400">
+              Srikanth Enugula, FrameX Digital Studio
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+
+      {/* ================= CO-FOUNDER ================= */}
+<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
+
+  {/* TEXT LEFT */}
+  <motion.div
+    className="space-y-6"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUp}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold">
+      Driven by{" "}
+      <span className="text-blue-400">Engineering Excellence</span>
+    </h2>
+
+    <p className="text-slate-300 text-lg leading-relaxed">
+      FrameX was founded by someone who has lived inside the realities of storytelling — tight deadlines, creative pressure, and compromise.
+    </p>
+
+    <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
+     “Technology should disappear into the background — so creators can stay focused on emotion, performance, and story.”
+    </blockquote>
+
+    <div className="pt-4">
+      <p className="text-white font-semibold text-lg">Founder</p>
+      <p className="text-slate-400">
+        Sridhar Enugula, FrameX Digital Studio
+      </p>
+    </div>
+  </motion.div>
+
+  {/* IMAGE RIGHT */}
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={fadeUp}
+  >
+    <img
+      src={coFounderImg}
+      alt="Co-Founder of Framex Digital Studio"
+      className="rounded-2xl shadow-xl object-cover w-full h-[420px] object-center"
+    />
+  </motion.div>
+
+</section>
+
       {/* ================= PAGE INTRO ================= */}
       <motion.section
         className="max-w-3xl mx-auto text-center mb-28"
@@ -53,7 +149,7 @@ export default function About() {
         </h1>
 
         <p className="text-slate-300 text-lg leading-relaxed">
-          Framex Digital Studio is an AI-powered creative technology company
+          FrameX Digital Studio is an AI-powered creative technology company
           built for the film and streaming industry.
         </p>
       </motion.section>
@@ -177,106 +273,11 @@ export default function About() {
         </motion.div>
 
         <p className="text-slate-400 text-center max-w-3xl mx-auto mt-12">
-          We build tools that disappear into the workflow —
+          We build tools that disappear into the workflow 
           so audiences only see the story, not the technology behind it.
         </p>
       </section>
 
-{/* ================= CO-FOUNDER ================= */}
-<section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
-
-  {/* TEXT LEFT */}
-  <motion.div
-    className="space-y-6"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, margin: "-100px" }}
-    variants={fadeUp}
-  >
-    <h2 className="text-3xl md:text-4xl font-bold">
-      Driven by{" "}
-      <span className="text-blue-400">Engineering Excellence</span>
-    </h2>
-
-    <p className="text-slate-300 text-lg leading-relaxed">
-      Framex was founded by someone who has lived inside the realities of storytelling — tight deadlines, creative pressure, and compromise.
-    </p>
-
-    <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
-     “Technology should disappear into the background — so creators can stay focused on emotion, performance, and story.”
-    </blockquote>
-
-    <div className="pt-4">
-      <p className="text-white font-semibold text-lg">Founder</p>
-      <p className="text-slate-400">
-        Sridhar Enugula, Framex Digital Studio
-      </p>
-    </div>
-  </motion.div>
-
-  {/* IMAGE RIGHT */}
-  <motion.div
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, margin: "-100px" }}
-    variants={fadeUp}
-  >
-    <img
-      src={coFounderImg}
-      alt="Co-Founder of Framex Digital Studio"
-      className="rounded-2xl shadow-xl object-cover w-full h-[420px] object-center"
-    />
-  </motion.div>
-
-</section>
-
-
-
-      {/* ================= FOUNDER ================= */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-32">
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeUp}
-        >
-          <img
-            src={founderImg}
-            alt="Founder of Framex Digital Studio"
-            className="rounded-2xl shadow-xl object-cover object-top w-full h-[420px]"
-          />
-        </motion.div>
-
-        <motion.div
-          className="space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeUp}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Built by a{" "}
-            <span className="text-blue-400">Storyteller</span>
-          </h2>
-
-          <p className="text-slate-300 text-lg leading-relaxed">
-            He is a Director of Engineering with 15+ years of experience leading AI-driven platforms and cloud-native architectures. He specializes in scaling AI SaaS systems, optimizing ML-ready infrastructure, and embedding secure, compliant DevSecOps practices—reducing cloud costs by 50%+ while accelerating delivery. He has mentored 80+ engineers globally, building high-performing teams that consistently deliver AI solutions at scale.
-          </p>
-
-          {/* <blockquote className="border-l-4 border-blue-400 pl-6 italic text-slate-200">
-            “Technology should disappear into the background —
-            so creators can stay focused on emotion, performance, and story.”
-          </blockquote> */}
-
-          <div className="pt-4">
-            <p className="text-white font-semibold text-lg">Director Of Engineering</p>
-            <p className="text-slate-400">
-              Srikanth Enugula, Framex Digital Studio
-            </p>
-          </div>
-        </motion.div>
-      </section>
 
 
       {/* ================= INDIA ================= */}
