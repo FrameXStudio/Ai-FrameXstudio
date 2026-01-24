@@ -127,7 +127,7 @@ export default function About() {
           </blockquote> */}
 
           <div className="pt-4">
-            <p className="text-white font-semibold text-lg">Director Of Engineering</p>
+            <p className="text-white font-semibold text-lg">Co-founder,Director Of Engineering</p>
             <p className="text-slate-400">
               Srikanth Enugula, FrameX Digital Studio
             </p>
