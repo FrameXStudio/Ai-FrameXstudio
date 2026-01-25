@@ -9,7 +9,7 @@ const services = [
     icon: "🎬",
     title: "AI-Assisted Dubbing",
     tagline: "New Languages. Same Emotion.",
-    text: "Natural, performance-aware dialogue generation for films and premium OTT content.",
+    text: "Performance-aware dialogue generation for films and premium OTT content.",
   },
   {
     icon: "👄",
@@ -37,7 +37,7 @@ const services = [
   },
 ];
 
-/* ================= MOTION VARIANTS ================= */
+/* ================= MOTION ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -49,9 +49,7 @@ const fadeUp = {
 
 const staggerContainer = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
+  visible: { transition: { staggerChildren: 0.12 } },
 };
 
 export default function Home() {
@@ -59,12 +57,9 @@ export default function Home() {
     <div className="text-white">
 
       {/* ================= HERO ================= */}
-
-
       <section className="w-full py-24 px-6 bg-gradient-to-br from-[#0B1220] via-[#09192F] to-[#08101C] rounded-xl mt-6 shadow-lg overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
-          {/* TEXT */}
           <motion.div
             className="flex-1"
             initial="hidden"
@@ -76,151 +71,121 @@ export default function Home() {
               <span className="text-blue-400">One Language.</span>
             </motion.h1>
 
-            <motion.h2
-              variants={fadeUp}
-              className="mt-6 text-xl md:text-2xl font-semibold text-slate-200"
-            >
+            <motion.h2 variants={fadeUp} className="mt-6 text-xl md:text-2xl font-semibold text-slate-200">
               AI-Powered Digital Studio for Film & OTT
             </motion.h2>
 
             <motion.p variants={fadeUp} className="text-slate-300 mt-6 text-lg max-w-xl">
-              <span className="font-semibold text-white">FrameX Digital Studio</span> helps studios,
-              OTT platforms, and creators take stories global — without losing emotion,
-              performance, or cinematic quality.
+              <span className="font-semibold text-white">FrameX Digital Studio</span> helps studios
+              take stories global without losing emotion, performance, or cinematic quality.
             </motion.p>
-
-            <motion.p variants={fadeUp} className="text-slate-400 mt-4 max-w-xl">
-              From AI-assisted dubbing to invisible lip sync, we turn one story into many
-              languages — faster, smarter, and story-first.
-            </motion.p>
-
-            <motion.ul variants={fadeUp} className="mt-6 space-y-3 text-slate-300">
-              <li>🎬 Built for studios</li>
-              <li>🌍 Designed for global releases</li>
-              <li>🎭 Trusted by post-production teams</li>
-            </motion.ul>
 
             <motion.div variants={fadeUp} className="mt-10 flex gap-4 flex-wrap">
-              <Link
-                to="/contact"
-                className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-medium shadow-md"
-              >
-                Book a Demo
+              <Link to="/contact" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium">
+                Early Access
               </Link>
-
-              <button className="px-6 py-3 border border-slate-400 hover:border-white rounded-lg text-slate-300 font-medium">
+              <button className="px-6 py-3 border border-slate-400 hover:border-white rounded-lg text-slate-300">
                 Watch a Sample
               </button>
             </motion.div>
           </motion.div>
 
-          {/* IMAGE */}
           <motion.div
             className="flex-1 flex justify-center"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8 }}
           >
             <img
               src={heroImg}
-              alt="AI Powered Studio"
-              className="w-auto max-w-full h-auto drop-shadow-[0_0_20px_#00aaff55]"
+              alt="AI Studio"
+              className="drop-shadow-[0_0_24px_#00aaff55]"
             />
           </motion.div>
         </div>
       </section>
 
-      {/* ================= SHORT ABOUT ================= */}
+      {/* ================= MANIFESTO ================= */}
       <motion.section
-        className="mt-24 px-6"
+        className="relative mt-36 px-4 sm:px-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         variants={fadeUp}
       >
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Built for Storytellers.{" "}
+        {/* Glow */}
+        <div className="absolute inset-0 -z-10 flex justify-center">
+          <div className="w-[700px] h-[420px] bg-blue-500/10 blur-[160px]" />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-blue-400 uppercase tracking-[0.3em] text-xs mb-6">
+            FrameX Digital Studio
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
+            Built for Storytellers.
+            <br />
             <span className="text-blue-400">Designed for Scale.</span>
           </h2>
 
-          <p className="text-slate-300 text-lg max-w-3xl mx-auto">
+          <p className="mt-8 text-slate-300 text-base sm:text-lg">
             Traditional localization slows releases, inflates budgets, and compromises performance.
-            <span className="text-white font-medium"> FrameX Digital Studio</span> exists to change that.
+            <span className="text-white font-medium"> FrameX</span> exists to change that.
           </p>
 
-          <p className="text-slate-400 mt-6 max-w-3xl mx-auto">
-            We combine advanced AI with professional post-production workflows to help content move
-            across languages without sounding artificial, looking dubbed, or losing creative intent.
+          <div className="w-20 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto my-10" />
+
+          <p className="text-slate-400 text-base sm:text-lg">
+            We combine advanced AI with professional post-production workflows to move content
+            across languages without sounding artificial or losing creative intent.
           </p>
 
-          <p className="mt-6 text-slate-300 font-medium">
-            This isn’t a shortcut.
-            <br />
-            <span className="text-white">
+          <div className="mt-10">
+            <p className="text-slate-400 text-sm">This isn’t a shortcut.</p>
+            <p className="text-white text-lg font-medium mt-1">
               This is a new standard for cinematic localization.
-            </span>
-          </p>
+            </p>
+          </div>
         </div>
       </motion.section>
 
       {/* ================= SERVICES ================= */}
-      <section id="services" className="mt-24 px-6">
-        <motion.h2
-          className="text-3xl font-semibold text-white mb-12 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeUp}
-        >
-          What We Do
-        </motion.h2>
+      <section id="services" className="mt-40 px-4 sm:px-6">
+        <div className="text-center mb-16">
+          <p className="text-blue-400 uppercase tracking-[0.25em] text-xs mb-4">
+            Capabilities
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-semibold">
+            What We Do
+          </h2>
+        </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
         >
           {services.map((s, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
               whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="bg-[#0D1525] border border-slate-700 p-8 rounded-2xl
-                         hover:border-blue-400 hover:shadow-[0_0_20px_#00aaff33]
-                         transition text-center"
+              transition={{ type: "spring", stiffness: 180, damping: 18 }}
+              className="rounded-2xl p-6 bg-gradient-to-br from-[#0C1424] to-[#070C16]
+                         border border-slate-800 hover:border-blue-400/60
+                         hover:shadow-[0_0_30px_#00aaff22] transition"
             >
-              <div className="text-4xl mb-4">{s.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-1">{s.title}</h3>
-              <p className="text-blue-300 text-sm mb-4">{s.tagline}</p>
-              <p className="text-slate-300 text-sm">{s.text}</p>
+              <div className="text-3xl mb-4">{s.icon}</div>
+              <h3 className="text-lg font-semibold">{s.title}</h3>
+              <p className="text-blue-300 text-sm mt-1">{s.tagline}</p>
+              <p className="text-slate-400 text-sm mt-4">{s.text}</p>
             </motion.div>
           ))}
         </motion.div>
       </section>
-
-      {/* ================= WHY CHOOSE ================= */}
-      <motion.section
-        className="mt-24 px-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={fadeUp}
-      >
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-            Why Choose <span className="text-blue-400">FrameX?</span>
-          </h2>
-
-          <p className="text-slate-400 max-w-3xl mx-auto">
-            Built to meet real-world studio demands — where speed, scale,
-            and cinematic quality must coexist.
-          </p>
-        </div>
-      </motion.section>
 
     </div>
   );
