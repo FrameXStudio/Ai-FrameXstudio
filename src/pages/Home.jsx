@@ -166,56 +166,133 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
+
       {/* ================= MANIFESTO ================= */}
-      <section className="px-6 py-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.3em] text-xs text-blue-400 mb-6">
+ {/* ================= FRAMEX MANIFESTO ================= */}
+<section className="relative px-6 py-12 bg-[#060C18] overflow-hidden">
+  {/* Ambient glow */}
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_40%,rgba(59,130,246,0.12),transparent_55%)]" />
+
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+    
+    {/* LEFT — Headline */}
+    <div className="lg:col-span-5">
+      <h2 className="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-tight">
+        Built for Storytellers.
+        <br />
+        <span className="text-blue-400">
+          Designed for Scale.
+        </span>
+      </h2>
+    </div>
+
+    {/* RIGHT — Content */}
+    <div className="lg:col-span-7 relative pl-10">
+      
+      {/* Vertical editorial line */}
+      <div className="absolute left-0 top-1 w-px h-full bg-gradient-to-b from-blue-400/60 via-slate-600/40 to-transparent" />
+
+      <div className="space-y-8 max-w-2xl">
+        <p className="text-slate-300 text-lg leading-relaxed">
+          Traditional localization slows releases, inflates budgets,
+          and compromises performance.{" "}
+          <span className="text-white font-medium">
             FrameX Digital Studio
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
-            Built for Storytellers.
+          </span>{" "}
+          exists to change that.
+        </p>
+
+        <p className="text-slate-400 text-base leading-relaxed">
+          We combine advanced AI with professional post-production workflows
+          to help content move across languages without sounding artificial,
+          looking dubbed, or losing creative intent.
+        </p>
+
+        {/* Highlight callout */}
+        <div className="rounded-xl border border-slate-800 bg-[#0A1324] px-6 py-5">
+          <p className="text-slate-300 text-lg font-medium leading-relaxed">
+            This isn’t a shortcut.
             <br />
-            <span className="text-blue-400">Designed for Scale.</span>
-          </h2>
-          <p className="mt-6 text-slate-300 text-lg">
-            Traditional localization slows releases and compromises performance.
-            This is a new standard for cinematic localization.
+            <span className="text-white">
+              This is a new standard for cinematic localization.
+            </span>
           </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* ================= SERVICES ================= */}
-      <section className="px-6 py-24 bg-[#060C18]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="uppercase tracking-[0.25em] text-xs text-blue-400 mb-4">
-              Capabilities
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold">What We Do</h2>
+    <section className="relative px-6 py-12 bg-[#060C18] overflow-hidden">
+  {/* Ambient background */}
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.10),transparent_55%)]" />
+
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <p className="uppercase tracking-[0.3em] text-xs text-blue-400 mb-4">
+        Capabilities
+      </p>
+      <h2 className="text-3xl sm:text-4xl font-semibold">
+        What We Do
+      </h2>
+    </div>
+
+    {/* Cards */}
+    <div className="flex flex-wrap justify-center gap-8">
+      {services.map((s, i) => (
+        <div
+          key={i}
+          className="
+            w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]
+            rounded-2xl p-8
+            bg-gradient-to-br from-[#0C1424] to-[#070C16]
+            border border-slate-800
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-blue-400/40
+            hover:shadow-[0_20px_50px_-20px_rgba(59,130,246,0.25)]
+          "
+        >
+          {/* Icon */}
+          <div
+            className="
+              mb-6 w-14 h-14 rounded-2xl
+              flex items-center justify-center
+              bg-gradient-to-br from-blue-500/20 to-blue-500/5
+              text-blue-400
+            "
+          >
+            <s.icon size={24} />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className="rounded-2xl p-6 bg-gradient-to-br from-[#0C1424] to-[#070C16]
-                           border border-slate-800"
-              >
-                <div className="mb-4 w-12 h-12 rounded-xl flex items-center justify-center
-                                bg-blue-500/10 text-blue-400">
-                  <s.icon size={22} />
-                </div>
-                <h3 className="text-lg font-semibold">{s.title}</h3>
-                <p className="text-blue-300 text-sm mt-1">{s.tagline}</p>
-                <p className="text-slate-400 text-sm mt-3">{s.text}</p>
-              </div>
-            ))}
-          </div>
+          {/* Content */}
+          <h3 className="text-lg font-semibold mb-1">
+            {s.title}
+          </h3>
+
+          <p className="text-blue-300 text-sm mb-3">
+            {s.tagline}
+          </p>
+
+          <p className="text-slate-400 text-sm leading-relaxed">
+            {s.text}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ================= USE CASES ================= */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="uppercase tracking-[0.25em] text-xs text-blue-400 mb-4">
@@ -264,7 +341,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+            {/* ================= WHY CHOOSE FRAMEX ================= */}
+<section className="px-6 py-24 bg-[#050B14]">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    
+    {/* Left */}
+    <div>
+      <p className="uppercase tracking-widest text-xs text-blue-400 mb-4">
+        Why FrameX
+      </p>
 
+      <h2 className="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-tight">
+        Built to meet real-world
+        <br />
+        <span className="text-blue-400">
+          studio demands
+        </span>
+      </h2>
+    </div>
+
+    {/* Right */}
+    <div>
+      <p className="text-slate-400 text-lg leading-relaxed max-w-xl">
+        Built to meet real-world studio demands  where speed,
+        scale, and cinematic quality must coexist.
+      </p>
+    </div>
+  </div>
+</section>
+            
       {/* ================= EARLY ACCESS MODAL ================= */}
       {openForm && (
         <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4">
