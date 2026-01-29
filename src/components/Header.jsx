@@ -1,84 +1,72 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo1.png";
 
 export default function Header() {
   const user = JSON.parse(localStorage.getItem("user"));
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const logout = () => {
-    const confirmLogout = window.confirm(
-      "Are you sure you want to logout?"
-    );
-
-    if (!confirmLogout) return;
-
+    if (!window.confirm("Are you sure you want to logout?")) return;
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-
     navigate("/login");
   };
 
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Careers", path: "/careers" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#071426]/95 backdrop-blur border-b border-slate-800">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#071426]/80 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-3">
           <img
             src={logo}
-            alt="FrameX-AI Studio"
-            className="h-12 object-contain"
+            alt="FrameX AI Studio"
+            className="h-11 object-contain"
           />
         </Link>
 
-        {/* DESKTOP MENU */}
-        <nav className="hidden md:flex items-center gap-8 text-slate-200">
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Careers", path: "/careers" },
-            { name: "Contact", path: "/contact" },
-          ].map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="relative group hover:text-white transition"
-            >
-              {item.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
-            </Link>
-          ))}
+        {/* DESKTOP NAV */}
+        <nav className="hidden md:flex items-center gap-10 text-sm font-medium text-slate-300">
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path;
 
-          {!user && (
-            <>
+            return (
               <Link
-                to="/login"
-                className="px-4 py-2 rounded border border-slate-600 hover:border-white transition"
+                key={item.name}
+                to={item.path}
+                className={`relative transition-all duration-300 hover:text-white
+                  ${isActive ? "text-white" : ""}`}
               >
-                Login
+                {item.name}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-300
+                  ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                />
               </Link>
-
-              <Link
-                to="/register"
-                className="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white transition"
-              >
-                Sign Up
-              </Link>
-            </>
-          )}
+            );
+          })}
 
           {user && (
             <button
               onClick={logout}
-              className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded text-white transition"
+              className="ml-6 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500 hover:text-white transition-all"
             >
               Logout
             </button>
           )}
         </nav>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE MENU TOGGLE */}
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -89,51 +77,32 @@ export default function Header() {
       </div>
 
       {/* MOBILE MENU */}
-      {menuOpen && (
-        <div className="md:hidden bg-[#071426] border-t border-slate-800 px-6 py-6 space-y-4 text-slate-200">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-white">
-            Home
-          </Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)} className="block hover:text-white">
-            About
-          </Link>
-          <Link to="/careers" onClick={() => setMenuOpen(false)} className="block hover:text-white">
-            Careers
-          </Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block hover:text-white">
-            Contact
-          </Link>
-
-          {!user && (
-            <>
-              <Link
-                to="/login"
-                onClick={() => setMenuOpen(false)}
-                className="block text-center px-4 py-2 border border-slate-600 rounded"
-              >
-                Login
-              </Link>
-
-              <Link
-                to="/register"
-                onClick={() => setMenuOpen(false)}
-                className="block text-center px-4 py-2 bg-blue-500 text-white rounded"
-              >
-                Sign Up
-              </Link>
-            </>
-          )}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden
+        ${menuOpen ? "max-h-[500px]" : "max-h-0"}`}
+      >
+        <div className="px-6 py-6 space-y-4 bg-[#071426] border-t border-white/10 text-slate-300">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              onClick={() => setMenuOpen(false)}
+              className="block text-lg hover:text-white transition"
+            >
+              {item.name}
+            </Link>
+          ))}
 
           {user && (
             <button
               onClick={logout}
-              className="w-full px-4 py-2 bg-red-500 rounded text-white"
+              className="w-full mt-4 px-4 py-3 rounded-full bg-red-500/10 text-red-400 border border-red-500/30 hover:bg-red-500 hover:text-white transition-all"
             >
               Logout
             </button>
           )}
         </div>
-      )}
+      </div>
     </header>
   );
 }
