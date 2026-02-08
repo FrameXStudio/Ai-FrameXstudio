@@ -243,7 +243,7 @@ function JobModal({ open, onClose, job }) {
               </div>
 
               {/* Footer actions */}
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+              <div className="mt-8 mb-10 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
                 <p className="text-xs text-white/45">
                   Tip: Make sure your CV highlights relevant automation projects,
                   media pipelines, and reliability (retries/logging/monitoring).
@@ -262,8 +262,7 @@ function JobModal({ open, onClose, job }) {
                   <button
                     onClick={() => {
                       toast.success("Open your apply form / route here");
-                      // Navigate to your apply page or open your ApplyModal here.
-                      // e.g. navigate(`/apply/${job._id}`)
+                   
                     }}
                     className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-white/90"
                   >
