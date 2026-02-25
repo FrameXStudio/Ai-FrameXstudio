@@ -86,16 +86,29 @@ export default function Footer() {
               performance, or creative intent.
             </p>
 
-            {/* Small info row (optional, looks premium) */}
+            {/* UPDATED CONTACT BADGES */}
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-400">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
                 <Mail className="h-4 w-4 text-blue-300" />
-                contact@framex.ai
+                hello@framexstudio.ai
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
                 <MapPin className="h-4 w-4 text-blue-300" />
-                India • Global
+                USA • India Offices
               </span>
+            </div>
+
+            {/* OPTIONAL FULL ADDRESS (subtle, matches design) */}
+            <div className="mt-6 text-xs text-slate-500 leading-relaxed space-y-2">
+              <p>
+                <span className="text-slate-400 font-medium">USA:</span>{" "}
+                4682 Vasari Street, Dublin, CA 94568
+              </p>
+              <p>
+                <span className="text-slate-400 font-medium">India:</span>{" "}
+                Flat No. 502, Maa Gayathri Avenue, Hill Top Colony,
+                Erramanzil, Hyderabad 500082, Telangana
+              </p>
             </div>
           </div>
 
