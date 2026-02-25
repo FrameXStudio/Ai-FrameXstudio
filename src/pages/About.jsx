@@ -94,7 +94,7 @@ export default function About() {
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            FrameX Digital Studio is an AI-powered creative technology company
+            FrameX AI Studio is an AI-powered creative technology company
             built for the film and streaming industry.
           </p>
         </motion.section>
@@ -113,7 +113,7 @@ export default function About() {
           <motion.div variants={fadeUp} className="md:col-span-6 order-1">
             <PremiumImage
               src={coFounderImg}
-              alt="Co-Founder of FrameX Digital Studio"
+              alt="Co-Founder of FrameX AI Studio"
               className="h-[260px] sm:h-[320px] md:h-[440px]"
             />
           </motion.div>
@@ -150,7 +150,7 @@ export default function About() {
             <div className="pt-2">
               <p className="text-white font-semibold">Founder</p>
               <p className="text-slate-400 text-sm">
-                Sridhar Enugula, FrameX Digital Studio
+                Sridhar Enugula, FrameX AI Studio
               </p>
             </div>
           </motion.div>
@@ -170,7 +170,7 @@ export default function About() {
           <motion.div variants={fadeUp} className="md:col-span-6">
             <PremiumImage
               src={founderImg}
-              alt="Founder of FrameX Digital Studio"
+              alt="Founder of FrameX AI Studio"
               className="object-top h-[260px] sm:h-[320px] md:h-[440px]"
             />
           </motion.div>
@@ -205,7 +205,7 @@ export default function About() {
                 Co-Founder · Director of Engineering
               </p>
               <p className="text-slate-400 text-sm">
-                Srikanth Enugula, FrameX Digital Studio
+                Srikanth Enugula, FrameX AI Studio
               </p>
             </div>
           </motion.div>

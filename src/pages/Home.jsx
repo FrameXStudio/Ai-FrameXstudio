@@ -156,7 +156,7 @@ export default function Home() {
               variants={fadeUp}
               className="mt-6 text-slate-300 text-lg sm:text-xl leading-relaxed max-w-2xl"
             >
-              <span className="text-white font-semibold">FrameX Digital Studio</span>{" "}
+              <span className="text-white font-semibold">FrameX AI Studio</span>{" "}
               helps studios, OTT platforms, and creators take stories global — without
               losing emotion, performance, or cinematic quality.
             </motion.p>
@@ -263,7 +263,7 @@ export default function Home() {
               <p className="text-slate-300 text-lg leading-relaxed">
                 Traditional localization slows releases, inflates budgets, and compromises
                 performance.{" "}
-                <span className="text-white font-medium">FrameX Digital Studio</span> exists
+                <span className="text-white font-medium">FrameX AI Studio</span> exists
                 to change that.
               </p>
 
